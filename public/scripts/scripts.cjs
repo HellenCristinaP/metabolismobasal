@@ -6,8 +6,8 @@ function calcular(event) {
   const genero = selecionaGeneroDoUsuario('genero');
   const dados = calcTMB(peso, idade, altura, genero);
   const dadosIMC = calcIMC(peso, altura);
-  const ganhoMassaMin = peso * 1.4;
-  const ganhoMassaMax = peso * 2;
+  const ganhoMassaMin = peso * 0.8;
+  const ganhoMassaMax = peso * 1.4;
   const ganharMassa = [ganhoMassaMin, ganhoMassaMax];
 
   mostrarResultados(dados, dadosIMC, ganharMassa);
@@ -57,18 +57,6 @@ function calcTMB(peso, idade, altura, genero) {
   ];
   return resData;
 };
-
-// // Para ganhar massa
-// function ganhoMassa(peso) {
-//   const ganhoMassaMin = peso * 1.4;
-//   const ganhoMassaMax = peso * 2;
-//   const ganhar_massa = document.getElementById('ganhar_massa');
-//   const ganharMassa = [ganhoMassaMin, ganhoMassaMax];
-
-//   ganhar_massa.innerHTML = ganharMassa.map((item) => {
-//     return Math.ceil(item);
-//   }).join(' - ');
-// };
 
 function calcIMC(peso, altura) {
   if (peso <= 0 || altura <= 0) {
