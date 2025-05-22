@@ -130,6 +130,11 @@ form.form .field-group:first-child {
   padding-top: 0.8rem;
 }
 
+form.form .field-group select{
+  font-family: "Ubuntu", sans-serif;
+  padding: 0.5rem 2rem;
+}
+
 form.form .field-group label[for="genero"] {
   margin-right: 0.8rem;
 }
@@ -224,6 +229,7 @@ form.form .field-btn {
 
 .result-list span {
   color: #555;
+  font-weight: bold;
 }
 
 .x-padd {
@@ -268,6 +274,7 @@ form.form .field-btn {
   font-weight: bold;
   display: inline-block;
   width: 1em;
+  margin-right: 5px;
 }
 
 .resultado-container p::before {
@@ -276,6 +283,7 @@ form.form .field-btn {
   font-weight: bold;
   display: inline-block;
   width: 1em;
+  margin-right: 5px;
 }
 
 footer {

@@ -13,7 +13,7 @@
 
   <link rel="stylesheet" type="text/css" href="public/styles/style.css" />
   <link rel="icon" href="./public/images/favicon.png" />
-  
+
   <script src="./public/scripts/scripts_PT.cjs"></script>
   <script src="./public/scripts/scripts.cjs"></script>
   <script src="./public/scripts/shared.js"></script>
@@ -27,13 +27,13 @@
         <img src="./public/images/flag-br.png">
       </div>
       <ul class="dropdown-list">
-        <li><a href="./index.html" target="_blank" title="Português (Brasil)"><img class="flag"
-              src="./public/images/flag-br.png"></a></li>
-        <li><a href="./public/pages/index_ES.html" target="_blank" title="Espanhol"><img class="flag"
+        <li><a href="./index.html" title="Português (Brasil)"><img class="flag" src="./public/images/flag-br.png"></a>
+        </li>
+        <li><a href="./public/pages/index_ES.html" title="Espanhol"><img class="flag"
               src="./public/images/flag-es.png"></a></li>
-        <li><a href="./public/pages/index_it.html" target="_blank" title="Italiano"><img class="flag"
+        <li><a href="./public/pages/index_it.html" title="Italiano"><img class="flag"
               src="./public/images/flag-it.png"></a></li>
-        <li><a href="./public/pages/index_en.html" target="_blank" title="Inglês"><img class="flag"
+        <li><a href="./public/pages/index_en.html" title="Inglês"><img class="flag"
               src="./public/images/flag-us.png"></a></li>
       </ul>
     </div>
@@ -50,10 +50,22 @@
         <div class="field-group">
           <label for="genero">SEXO:</label>
           <select name="genero" id="genero">
+            <!-- <option value="selecioneAlgo">Selecione algo</option> -->
             <option value="Feminino">Feminino</option>
             <option value="Masculino">Masculino</option>
           </select>
         </div>
+
+        <!-- <div class="field-group">
+          <label for="exercicio">Atividade física:</label>
+          <select name="exercicio" id="exercicio">
+            <option value="selecioneAlgo">Selecione algo</option>
+            <option value="Sedentário">Sedentário</option>
+            <option value="Exercício leve">Exercício leve</option>
+            <option value="Exercício moderado">Exercício moderado</option>
+            <option value="Exercício regular">Exercício regular</option>
+          </select>
+        </div> -->
 
         <div class="field-group">
           <label for="peso">PESO <small>(kg)</small>:</label>
@@ -92,10 +104,11 @@
 
         <h3 class="x-padd">GANHAR PESO:</h3>
 
-        <p>
-          Para ganhar peso você deve consumir:
-          <span id="ganhar_peso" class="result-peso"></span> cal<small> (diariamente)</small>
-        </p>
+        <ul>
+          <li>Para ganhar peso você deve consumir: <span id="ganhar_peso" class="result-peso"></span> cal
+            <small>(diariamente)</small></li>
+          <li>Consumo de proteína: <span id="ganhar_massa"></span> gramas
+          <small>(diariamente)</small></li>
 
         <h3 class="x-padd">PERDER PESO:</h3>
 
@@ -133,6 +146,9 @@
               class="material-icons">article</i>IMPORTÂNCIA DA EQUAÇÃO DE
             HARRIS-BENEDICT
           </a>
+        </li>
+        <li>
+          <a href="https://jornal.usp.br/atualidades/proteinas-sao-essenciais-para-o-bom-funcionamento-do-organismo-humano/"><i class="material-icons"></i>Como proteínas são essencias</a>
         </li>
       </ul>
     </div>

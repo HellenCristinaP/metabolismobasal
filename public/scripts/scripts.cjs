@@ -6,11 +6,14 @@ function calcular(event) {
   const genero = selecionaGeneroDoUsuario('genero');
   const dados = calcTMB(peso, idade, altura, genero);
   const dadosIMC = calcIMC(peso, altura);
+  const ganhoMassaMin = peso * 1.4;
+  const ganhoMassaMax = peso * 2;
+  const ganharMassa = [ganhoMassaMin, ganhoMassaMax];
 
-  mostrarResultados(dados, dadosIMC);
+  mostrarResultados(dados, dadosIMC, ganharMassa);
 };
 
-function mostrarResultados(dados, dadosIMC) {
+function mostrarResultados(dados, dadosIMC, ganharMassa) {
   document.querySelectorAll('.result-item').forEach((item, index) => {
     item.innerHTML = Math.ceil(dados[0][index]);
   });
@@ -22,6 +25,9 @@ function mostrarResultados(dados, dadosIMC) {
   document.getElementById('imc').innerHTML = Math.ceil(dadosIMC);
   document.getElementById('imc_classification').innerHTML = calcTabelaIMC(dadosIMC);
   document.getElementById('result-data').style.visibility = 'visible';
+  document.getElementById('ganhar_massa').innerHTML = ganharMassa.map((item) => {
+    return Math.ceil(item);
+  }).join(' ~ ');
 };
 
 function selecionaGeneroDoUsuario(id) {
@@ -51,6 +57,18 @@ function calcTMB(peso, idade, altura, genero) {
   ];
   return resData;
 };
+
+// // Para ganhar massa
+// function ganhoMassa(peso) {
+//   const ganhoMassaMin = peso * 1.4;
+//   const ganhoMassaMax = peso * 2;
+//   const ganhar_massa = document.getElementById('ganhar_massa');
+//   const ganharMassa = [ganhoMassaMin, ganhoMassaMax];
+
+//   ganhar_massa.innerHTML = ganharMassa.map((item) => {
+//     return Math.ceil(item);
+//   }).join(' - ');
+// };
 
 function calcIMC(peso, altura) {
   if (peso <= 0 || altura <= 0) {
