@@ -277,14 +277,14 @@ form.form .field-btn {
   margin-right: 5px;
 }
 
-.resultado-container p::before {
+/* .resultado-container p::before {
   content: "\2192";
   color: #34cb79;
   font-weight: bold;
   display: inline-block;
   width: 1em;
   margin-right: 5px;
-}
+} */
 
 footer {
   padding: 20px;
@@ -334,10 +334,6 @@ footer ul li a:hover {
   header h1.title {
     font-size: 2rem;
   }
-
-  /* header img.logo {
-    width: 7%;
-  } */
 
   .container {
     max-width: 90vw;

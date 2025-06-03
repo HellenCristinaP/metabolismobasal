@@ -11,7 +11,26 @@ function calcular(event) {
   const ganharMassa = [ganhoMassaMin, ganhoMassaMax];
 
   mostrarResultados(dados, dadosIMC, ganharMassa);
+  mostrarObjetivo();
 };
+
+function mostrarObjetivo() {
+  const tipoExercicio = document.getElementById('tipoExercicio');
+  const tipoExercicioValue = tipoExercicio.options[tipoExercicio.selectedIndex].value;
+  console.log(tipoExercicioValue);
+
+  if(tipoExercicioValue === 'sedentario') {
+    document.getElementById("lisedentario").style.display = "block";
+  } else if(tipoExercicioValue === 'exercicioLeve') {
+    document.getElementById("liexercicioleve").style.display = "block";;
+  } else if(tipoExercicioValue === 'exercicioModerado') {
+    document.getElementById("liexercicioModerado").style.display = "block";;
+  } else if(tipoExercicioValue === 'ativo') {
+    document.getElementById("liativo").style.display = "block";
+  } else if(tipoExercicioValue === 'superAtivo') {
+    document.getElementById("lisuperAtivo").style.display = "block";
+  } 
+}
 
 function mostrarResultados(dados, dadosIMC, ganharMassa) {
   document.querySelectorAll('.result-item').forEach((item, index) => {
@@ -25,6 +44,8 @@ function mostrarResultados(dados, dadosIMC, ganharMassa) {
   document.getElementById('imc').innerHTML = Math.ceil(dadosIMC);
   document.getElementById('imc_classification').innerHTML = calcTabelaIMC(dadosIMC);
   document.getElementById('result-data').style.visibility = 'visible';
+  document.getElementById('result-obj').style.visibility = 'visible';
+
   document.getElementById('ganhar_massa').innerHTML = ganharMassa.map((item) => {
     return Math.ceil(item);
   }).join(' ~ ');

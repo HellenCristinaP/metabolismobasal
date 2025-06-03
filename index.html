@@ -50,22 +50,21 @@
         <div class="field-group">
           <label for="genero">SEXO:</label>
           <select name="genero" id="genero">
-            <!-- <option value="selecioneAlgo">Selecione algo</option> -->
             <option value="Feminino">Feminino</option>
             <option value="Masculino">Masculino</option>
           </select>
         </div>
 
-        <!-- <div class="field-group">
-          <label for="exercicio">Atividade física:</label>
-          <select name="exercicio" id="exercicio">
-            <option value="selecioneAlgo">Selecione algo</option>
-            <option value="Sedentário">Sedentário</option>
-            <option value="Exercício leve">Exercício leve</option>
-            <option value="Exercício moderado">Exercício moderado</option>
-            <option value="Exercício regular">Exercício regular</option>
+        <div class="field-group">
+          <label for="tipoExercicio">Qual seu tipo de prática esportiva?</label>
+          <select name="tipoExercicio" id="tipoExercicio">
+            <option value="sedentario">Sedentário</option>
+            <option value="exercicioLeve">Exercício Leve</option>
+            <option value="exercicioModerado">Exercício Moderado</option>
+            <option value="ativo">Exercício Regular</option>
+            <option value="superAtivo">Super Ativo</option>
           </select>
-        </div> -->
+        </div>
 
         <div class="field-group">
           <label for="peso">PESO <small>(kg)</small>:</label>
@@ -95,27 +94,12 @@
       <div class="result-list" id="result-data" style="visibility: hidden">
         <ul>
           <li>Metabolismo Basal : <span id="metabolismo_basal" class="result-item"></span> cal</li>
-          <li>Sedentário controle remoto : <span id="sedentario" class="result-item"></span> cal</li>
-          <li>Exercício light : <span id="exercicio_leve" class="result-item"></span> cal</li>
-          <li>Exercício moderado: <span id="exercicio_moderado" class="result-item"></span> cal</li>
-          <li>Exercício regular : <span id="ativo" class="result-item"></span> cal</li>
-          <li>Exercício 2 horas por dia: <span id="super_ativo" class="result-item"></span> cal</li>
+          <li id="lisedentario" style="display: none">Sedentário controle remoto : <span id="sedentario" class="result-item"></span> cal</li>
+          <li id="liexercicioLeve" style="display: none">Exercício light : <span id="exercicio_leve" class="result-item"></span> cal</li>
+          <li id="liexercicioModerado" style="display: none">Exercício moderado: <span id="exercicio_moderado" class="result-item"></span> cal</li>
+          <li id="liativo" style="display: none">Exercício regular : <span id="ativo" class="result-item"></span> cal</li>
+          <li id="lisuperAtivo" style="display: none">Exercício 2 horas por dia: <span id="super_ativo" class="result-item"></span> cal</li>
         </ul>
-
-        <h3 class="x-padd">GANHAR PESO:</h3>
-
-        <ul>
-          <li>Para ganhar peso você deve consumir: <span id="ganhar_peso" class="result-peso"></span> cal
-            <small>(diariamente)</small></li>
-          <li>Consumo de proteína: <span id="ganhar_massa"></span> gramas
-          <small>(diariamente)</small></li>
-
-        <h3 class="x-padd">PERDER PESO:</h3>
-
-        <p>
-          Para perder peso você deve consumir até:
-          <span id="perder_peso" class="result-peso"></span> cal
-        </p>
 
         <h3 class="x-padd">Dados IMC:</h3>
 
@@ -123,8 +107,27 @@
           <li>IMC: <span id="imc"></span></li>
           <li>Classificação: <span id="imc_classification"></span> </li>
         </ul>
-
       </div>
+      <div class="result-obj" id="result-obj" style="visibility: hidden">
+        <h3 class="x-padd">GANHAR PESO:</h3>
+
+        <ul>
+          <li>Para ganhar peso você deve consumir: <span id="ganhar_peso" class="result-peso"></span> cal
+            <small>(diariamente)</small>
+          </li>
+          <li>Consumo de proteína: <span id="ganhar_massa"></span> gramas
+            <small>(diariamente)</small>
+          </li>
+
+          <h3 class="x-padd">PERDER PESO:</h3>
+
+          <ul>
+            <li>Para perder peso você deve consumir até: <span id="perder_peso" class="result-peso"></span> cal
+            </li>
+          </ul>
+      </div>
+
+
     </div>
   </main>
 
@@ -148,7 +151,9 @@
           </a>
         </li>
         <li>
-          <a href="https://jornal.usp.br/atualidades/proteinas-sao-essenciais-para-o-bom-funcionamento-do-organismo-humano/"><i class="material-icons"></i>Como proteínas são essencias</a>
+          <a
+            href="https://jornal.usp.br/atualidades/proteinas-sao-essenciais-para-o-bom-funcionamento-do-organismo-humano/"><i
+              class="material-icons"></i>Como proteínas são essencias</a>
         </li>
       </ul>
     </div>
