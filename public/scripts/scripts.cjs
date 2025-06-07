@@ -1,3 +1,4 @@
+
 function calcular(event) {
   event.preventDefault();
   const peso = Number(document.getElementById("peso").value);
@@ -56,6 +57,7 @@ function mostrarResultados(dados, dadosIMC, ganharMassa) {
   });
 
   document.querySelectorAll(".result-peso").forEach((item, index) => {
+  document.querySelectorAll(".result-peso").forEach((item, index) => {
     item.innerHTML = Math.ceil(dados[1][index]);
   });
 
@@ -102,11 +104,13 @@ function calcTMB(peso, idade, altura, genero) {
 
 function calcIMC(peso, altura) {
   if (peso <= 0 || altura <= 0) {
+
     return null;
   }
+  }
 
-  const alturaMetros = altura / 100;
-  const imc = peso / (alturaMetros * alturaMetros);
+  const heightInMeters = height / 100;
+  const imc = weight / (heightInMeters * heightInMeters);
 
   return imc.toFixed(2);
 }
