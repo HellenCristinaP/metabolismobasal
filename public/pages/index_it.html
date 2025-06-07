@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it-IT">
 
 <head>
   <meta charset="UTF-8" />
@@ -12,6 +12,7 @@
   <title>Calcolatore di Metabolismo Basale</title>
 
   <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
   <link rel="icon" href="../images/favicon.png" />
 
   <script src="../scripts/scripts_it.js"></script>
@@ -27,14 +28,13 @@
         <img src="../images/flag-it.png">
       </div>
       <ul class="dropdown-list">
-        <li><a href="../../index.html" title="Portoghese - (Brasile)"><img class="flag"
-              src="../images/flag-br.png"></a></li>
-        <li><a href="./index_ES.html" title="Spagnolo"><img class="flag"
-              src="../images/flag-es.png"></a></li>
-        <li><a href="./index_it.html" title="Italiano"><img class="flag"
-              src="../images/flag-it.png"></a></li>
-        <li><a href="./index_en.html" title="Inglese"><img class="flag" src="../images/flag-us.png"></a>
-        </li>
+
+        <li><a href="../../index.html" title="Portoghese - (Brasile)"><img class="flag" src="../images/flag-br.png"></a></li>
+        <li><a href="./index_ES.html" title="Spagnolo"><img class="flag" src="../images/flag-es.png"></a></li>
+        <li><a href="./index_it.html" title="Italiano"><img class="flag" src="../images/flag-it.png"></a></li>
+        <li><a href="./index_en.html" title="Inglese"><img class="flag" src="../images/flag-us.png"></a></li>
+        <li><a href="./index_fr.html" title="Francese"><img class="flag" src="../images/flag-fr.png"></a></li>
+
       </ul>
     </div>
   </div>
@@ -89,7 +89,7 @@
           <li>Esercizio regolare : <span id="ativo" class="result-item"></span> cal</li>
           <li>Esercizio 2 ore al gioron : <span id="super_ativo" class="result-item"></span> cal</li>
         </ul>
-        <h3 class="x-padd">
+        <h3 class="form">
           PRENDERE PESO:
         </h3>
 
@@ -99,7 +99,7 @@
           <li>Consumo di proteine: <span id="ganhar_massa"></span> grammi</li>
         </ul>
 
-        <h3 class="x-padd">
+        <h3 class="form">
           PERDERE PESO:
         </h3>
 
@@ -108,7 +108,7 @@
           <span id="perder_peso" class="result-peso"></span> cal
         </p>
 
-        <h3 class="x-padd">Dados IMC:</h3>
+        <h3 class="form">Dados IMC:</h3>
 
         <ul>
           <li>IMC: <span id="imc"></span></li>
@@ -123,18 +123,17 @@
         <h4 class="text-center">RIFERIMENTI</h4>
         <ul>
           <li>
-            <a href="https://github.com/adalbertobrant/metabolismobasal/graphs/contributors"><i
-                class="material-icons">article</i>Contributori
+            <a class="rodape" href="https://github.com/adalbertobrant/metabolismobasal/graphs/contributors"><i
+              class="bi bi-github"></i> Contributori
             </a>
           </li>
           <li>
-            <a href="https://www.leighpeele.com/mifflin-st-jeor-calculator"><i class="material-icons">article</i>Come
-              viene calcolato</a>
+            <a class="rodape" href="https://www.leighpeele.com/mifflin-st-jeor-calculator"><i
+              class="bi bi-calculator"></i> Come viene calcolato</a>
           </li>
           <li>
-            <a href="https://www.scielo.br/pdf/abcd/v29n3/pt_0102-6720-abcd-29-03-00185.pdf"><i
-                class="material-icons">article</i>Importanza dell'equazione di
-              Harris-BENEDICT
+            <a class="rodape" href="https://www.scielo.br/pdf/abcd/v29n3/pt_0102-6720-abcd-29-03-00185.pdf"><i
+              class="bi bi-journal-text"></i> Importanza dell'equazione di Harris-Benedict
             </a>
           </li>
         </ul>
