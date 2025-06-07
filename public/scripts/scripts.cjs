@@ -103,13 +103,11 @@ function calcTMB(peso, idade, altura, genero) {
 
 function calcIMC(peso, altura) {
   if (peso <= 0 || altura <= 0) {
-
     return null;
   }
-  }
 
-  const heightInMeters = height / 100;
-  const imc = weight / (heightInMeters * heightInMeters);
+  const heightInMeters = altura / 100;
+  const imc = peso / (heightInMeters * heightInMeters);
 
   return imc.toFixed(2);
 }
