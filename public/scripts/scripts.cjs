@@ -57,7 +57,6 @@ function mostrarResultados(dados, dadosIMC, ganharMassa) {
   });
 
   document.querySelectorAll(".result-peso").forEach((item, index) => {
-  document.querySelectorAll(".result-peso").forEach((item, index) => {
     item.innerHTML = Math.ceil(dados[1][index]);
   });
 
